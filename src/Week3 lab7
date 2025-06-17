@@ -1,0 +1,162 @@
+#include <iostream>
+using namespace std;
+
+void sayHello() {
+static int count = 0;
+   count++;
+   std::cout << "Hello! Called " << count << " times.\n";
+}
+int main() {
+   addToSum(5);
+   addToSum(10);
+    addToSum(3);
+   return 0;
+}
+#include <iostream>
+using namespace std;
+
+void addToSum(int x) {
+    static int sum = 0;
+    sum += x;
+    cout << "Current sum: " << sum << endl;
+}
+
+int main() {
+    addToSum(5);
+    addToSum(10);
+    addToSum(3);
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+void updateMax(int x) {
+    static int maxVal = INT_MIN;
+    if (x > maxVal) maxVal = x;
+    cout << "Max so far: " << maxVal << endl;
+}
+
+int main() {
+    updateMax(5);
+    updateMax(10);
+    updateMax(3);
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+void swap(int &a, int &b) {
+    a = a + b;
+    b = a - b;
+    a = a - b;
+}
+
+int main() {
+    int a = 7, b = 12;
+    swap(a, b);
+    cout << "a: " << a << ", b: " << b << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+void power_two(int &x) {
+    x = x * x;
+}
+
+int main() {
+    int a = 6;
+    power_two(a);
+    cout << "a squared: " << a << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+void reverseDigits(int &x) {
+    int num = x, rev = 0;
+    while (num != 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
+    }
+    x = rev;
+}
+
+int main() {
+    int x = 10012;
+    reverseDigits(x);
+    cout << "Reversed: " << x << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int value = 10;
+
+void fun() {
+    int value = 5;
+    cout << "Inside fun(): " << value << endl;
+}
+
+int main() {
+    int value = 3;
+    fun();
+    cout << "Inside main(): " << value << endl;
+    cout << "Global value: " << ::value << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int sum_numbers(int n) {
+    if (n <= 1) return n;
+    return n + sum_numbers(n - 1);
+}
+
+int main() {
+    cout << "Sum to 5: " << sum_numbers(5) << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+void print_numbers(int n) {
+    if (n == 0) return;
+    print_numbers(n - 1);
+    cout << n << " ";
+}
+
+int main() {
+    print_numbers(5);
+    cout << endl;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (n < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl;
+    } else {
+        cout << "Factorial of " << n << " is: " << factorial(n) << endl;
+    }
+
+    return 0;
+}
