@@ -1,0 +1,146 @@
+// #include <iostream>
+// using namespace std;
+// double product(double a, double b) {
+//     return a * b;
+//
+// }
+//
+// int main() {
+//     double a, b;
+//     cin >> a >> b;
+//     cout << product(a, b) << endl;
+//     return 0;
+//
+// }
+
+// #include <iostream>
+// using namespace std;
+// double acceleration (double V1, double V2, double T) {
+//     return (V1-V2) /T;
+// }
+// int main() {
+//     double V1, V2, T;
+//     cin >> V1 >> V2 >> T;
+//     cout << acceleration(V1, V2, T) << endl;
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// void fun(double R) {
+//     cout << "circumference = " << R * 2*3.14 << endl;
+//     cout << "area = " << R * R * 3.14 << endl;
+//
+// }
+//
+// int main() {
+//     double R;
+//     cin >> R;
+//     fun(R);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+//
+// void fun(double a , double b) {
+//     cout << "area = " << a * b << endl;
+//     cout <<"perimeter = " << a + b << endl;
+//
+// }
+//
+// int main() {
+//     double a,b;
+//     cin >> a>>b;
+//     fun(a,b);
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int factorial(int n=0) {
+//     int f=1;
+//     for(int i=1;i<=n;i++) {
+//         f=f*i;
+//     }
+//     return f;
+// }
+//     int main() {
+//         int n;
+//         cin>>n;
+//         cout<<factorial(n)<<endl;
+//         return 0;
+//     }
+
+// #include <iostream>
+// using namespace std;
+//
+// int minimum(int a, int b, int c) {
+//     if (a < b && a < c) return a;
+//     if (b < c) return b;
+//     return c;
+// }
+//
+// int maximum(int a, int b, int c) {
+//     if (a > b && a > c) return a;
+//     if (b > c) return b;
+//     return c;
+// }
+//
+// int main() {
+//     int a, b, c;
+//     cin >> a >> b >> c;
+//     cout << "Maximum: " << maximum(a, b, c) << endl;
+//     cout << "Minimum: " << minimum(a, b, c);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+//
+// void displayEven(int number) {
+//     int digits[10], index = 0;
+//     while (number > 0) {
+//         int d = number % 10;
+//         digits[index++] = d;
+//         number /= 10;
+//     }
+//     for (int i = index - 1; i >= 0; i--) {
+//         if (digits[i] % 2 == 0)
+//             cout << digits[i] << " ";
+//     }
+// }
+//
+// int main() {
+//     int n;
+//     cin >> n;
+//     displayEven(n);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+//
+// int cubeOfDigits(int number) {
+//     int sum = 0;
+//     while (number > 0) {
+//         int d = number % 10;
+//         sum += d * d * d;
+//         number /= 10;
+//     }
+//     return sum;
+// }
+//
+// bool isArmstrong(int number) {
+//     return number == cubeOfDigits(number);
+// }
+//
+// int main() {
+//     int n;
+//     cin >> n;
+//     if (isArmstrong(n))
+//         cout << "Yes";
+//     else
+//         cout << "No";
+//     return 0;
+// }
